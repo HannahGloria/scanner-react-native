@@ -8,10 +8,9 @@ export default function App() {
   const [hasPermission, setHasPermission] = useState(null);
   const [scanned, setScanned] = useState(false);
   const [text, setText] = useState("Aún no se ha escaneado nada");
-  const cameraRef = useRef(null); //
+  const cameraRef = useRef(null);
 
   const askForCameraPermission = async () => {
-    //
     const { status } = await Permissions.askAsync(Permissions.CAMERA);
     setHasPermission(status === "granted");
   };
@@ -28,14 +27,9 @@ export default function App() {
     askForCameraPermission();
   }, []);
 
-  // const handleCameraCapture = async ({ uri }) => {
-  //   setText("Imagen capturada: " + uri);
-  //   setScanned(true);
-  // };
-  const handleCameraCapture = ({ type, data }) => {
-    setText(data);
+  const handleCameraCapture = async ({ uri }) => {
+    setText("Imagen capturada: " + uri);
     setScanned(true);
-    console.log("Type: ", type + " Data: ", data);
   };
 
   if (hasPermission === null) {
@@ -49,11 +43,8 @@ export default function App() {
     return (
       <View style={styles.container}>
         <Text style={{ margin: 10 }}>Sin acceso a la cámara</Text>
-        {/* <Button title="Capture" onPress={handleCameraCapture} /> */}
-        <Button
-          title={"Permitir acceso"}
-          onPress={() => askForCameraPermission()}
-        />
+        <Button title="Capture" onPress={handleCameraCapture} />
+        <Button title={"Permitir acceso"} onPress={askForCameraPermission} />
       </View>
     );
   }
