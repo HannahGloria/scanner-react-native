@@ -19,7 +19,8 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff",
-        "versionCode": 1
+        "versionCode": 1,
+        "package": "com.expogo.appscannernative"
       }
     },
     "web": {
