@@ -1,0 +1,38 @@
+{
+  "expo": {
+    "name": "appscannernative",
+    "slug": "appscannernative",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff",
+        "versionCode": 1,
+        "package": "com.anonymous.appscannernative"
+      },
+      "package": "com.anonymous.appscannernative"
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "a85b15c3-ea4e-4631-b1c1-72e97239f76a"
+      }
+    }
+  }
+}
