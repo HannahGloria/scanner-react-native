@@ -18,7 +18,6 @@
     "expo-system-ui": "^2.9.3",
     "react": "18.2.0",
     "react-native": "0.73.4",
-    "react-native-camera": "^4.2.1",
     "react-native-image-picker": "^7.1.0",
     "react-native-qrcode-scanner": "^1.5.5",
     "react-native-tts": "^4.1.0"
